@@ -25,7 +25,10 @@ jobs:
     # Run tests
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
-          
+  ts-build:
+    name: Build and test TS
+    runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
+    steps:
     - name: NPM Install
       run: cd DotnetTemplate.Web && npm ci
 
@@ -37,4 +40,4 @@ jobs:
 
     - name: NPM Lint
       run: cd DotnetTemplate.Web && npm run lint
-      
+    
