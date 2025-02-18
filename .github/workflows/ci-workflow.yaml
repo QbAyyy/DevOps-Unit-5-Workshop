@@ -27,7 +27,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal --configuration Release
     
     - name: NPM Directory Choice
-      run: cd DotnetTemplate.web
+      run: cd DotnetTemplate.Web
       
     - name: NPM Install
       run: npm ci
