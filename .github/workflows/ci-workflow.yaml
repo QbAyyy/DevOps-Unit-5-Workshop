@@ -26,3 +26,16 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
     
+    - name: NPM Install
+      run: cd DotnetTemplate.web
+      run: npm ci
+
+    - name: NPM Build
+      run: npm run build
+
+    - name: NPM Test
+      run: npm t
+
+    - name: NPM Lint
+      run: npm run lint 
+      
