@@ -25,19 +25,16 @@ jobs:
     # Run tests
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
-    
-    - name: NPM Directory Choice
-      run: cd DotnetTemplate.Web
-      
+          
     - name: NPM Install
-      run: npm ci
+      run: cd DotnetTemplate.Web && npm ci
 
     - name: NPM Build
-      run: npm run build
+      run: cd DotnetTemplate.Web && npm run build
 
     - name: NPM Test
-      run: npm t
+      run: cd DotnetTemplate.Web && npm t
 
     - name: NPM Lint
-      run: npm run lint
+      run: cd DotnetTemplate.Web && npm run lint
       
